@@ -1,46 +1,4 @@
 
-# from selenium import webdriver
-# from selenium.webdriver.chrome.service import Service
-# from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.common.by import By
-# from webdriver_manager.chrome import ChromeDriverManager
-# from concurrent.futures import ThreadPoolExecutor
-# import time
-
-
-# def perform_actions(url):
-
-#     driver.execute_script(f"window.open('{url}', '_blank');")
-#     driver.switch_to.window(driver.window_handles[-1])
-    
-#     roll_number_input = driver.find_element("name", "roll_no")
-#     roll_number_input.send_keys("2k22/ee/103")
-    
-#     password_input = driver.find_element("name", "password")
-#     password_input.send_keys("hu77ha")
-    
-#     login_button = driver.find_element(By.CSS_SELECTOR, "button.btn-primary")
-#     login_button.click()
-    
-#     link = driver.find_element(By.XPATH, "//a[contains(@href,'courseRegisteration/6497164af608d957ec3b409a')]")
-#     driver.execute_script("arguments[0].click();", link)
-    
-    
-
-
-# with ThreadPoolExecutor(max_workers=10) as executor:
-#     options = Options()
-#     options.add_experimental_option("detach", True)
-#     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-    
-
-#     initial_url = "http://reg.exam.dtu.ac.in/student/login"
-    
-
-#     for _ in range(3):
-#         executor.submit(perform_actions, initial_url)
-#         time.sleep(3)
-
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -107,3 +65,49 @@ with ThreadPoolExecutor(max_workers=10) as executor:
         time.sleep(5)
 
 
+
+
+
+
+
+# from selenium import webdriver
+# from selenium.webdriver.chrome.service import Service
+# from selenium.webdriver.chrome.options import Options
+# from selenium.webdriver.common.by import By
+# from webdriver_manager.chrome import ChromeDriverManager
+# from concurrent.futures import ThreadPoolExecutor
+# import time
+
+
+# def perform_actions(url):
+
+#     driver.execute_script(f"window.open('{url}', '_blank');")
+#     driver.switch_to.window(driver.window_handles[-1])
+    
+#     roll_number_input = driver.find_element("name", "roll_no")
+#     roll_number_input.send_keys("2k22/ee/103")
+    
+#     password_input = driver.find_element("name", "password")
+#     password_input.send_keys("hu77ha")
+    
+#     login_button = driver.find_element(By.CSS_SELECTOR, "button.btn-primary")
+#     login_button.click()
+    
+#     link = driver.find_element(By.XPATH, "//a[contains(@href,'courseRegisteration/6497164af608d957ec3b409a')]")
+#     driver.execute_script("arguments[0].click();", link)
+    
+    
+
+
+# with ThreadPoolExecutor(max_workers=10) as executor:
+#     options = Options()
+#     options.add_experimental_option("detach", True)
+#     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    
+
+#     initial_url = "http://reg.exam.dtu.ac.in/student/login"
+    
+
+#     for _ in range(3):
+#         executor.submit(perform_actions, initial_url)
+#         time.sleep(3)
