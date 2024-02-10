@@ -23,13 +23,13 @@ def perform_actions(url):
     roll_number_input = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.NAME, "roll_no"))
     )
-    roll_number_input.send_keys("2k22/ee/103")
+    roll_number_input.send_keys("#########################################")
 
     # Wait for the password input to be present
     password_input = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.NAME, "password"))
     )
-    password_input.send_keys("hu77ha")
+    password_input.send_keys("############################################")
 
     # Wait for the login button to be clickable
     login_button = WebDriverWait(driver, 10).until(
@@ -39,14 +39,14 @@ def perform_actions(url):
 
     # Wait for the link to be present
     link = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "//a[contains(@href,'courseRegisteration/6497164af608d957ec3b409a')]"))
+        EC.presence_of_element_located((By.XPATH, "//a[contains(@href,'courseRegisteration/##############################')]"))
     )
     driver.execute_script("arguments[0].click();", link)
 
     # Switch to the new window (if applicable)
     driver.switch_to.window(driver.window_handles[-1])
 
-    register_button_path = "//td[contains(normalize-space(), 'Value Driven Leadership')]/following-sibling::td/form/button[normalize-space()='Register']"
+    register_button_path = "//td[contains(normalize-space(), '#####################')]/following-sibling::td/form/button[normalize-space()='Register']"
 
     register_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, register_button_path))
